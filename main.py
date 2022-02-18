@@ -15,8 +15,8 @@ def Enter_Screen():
         print(f"Here is your new Account Number: {user.account_num}. Please save it for your personal records")
 
         users[user.account_num] = user
-        user_log = open("Users.text","a")
-        user_log.write(str(users))
+        user_log = open("Users.txt","a")
+        user_log.write(f"\n{users}")
         user_log.close()
 
         Login(user)
