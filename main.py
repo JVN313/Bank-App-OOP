@@ -1,13 +1,14 @@
 from classes import *
 from newuser import *
 from login import *
+from Main_Screen import *
 
 def Enter_Screen():
     user = ""
     users = {}
 
     print("Welcome To Jamm Bank")
-    user_input = input("New Users Press 'A' \n Login Press 'B'").upper()
+    user_input = input("New Users Press 'A'\n Login Press 'B'").upper()
 
     if user_input == "A":
         user = New_User(user)
@@ -18,19 +19,13 @@ def Enter_Screen():
         user_log = open("Users.txt","a")
         user_log.write(f"\n{users}")
         user_log.close()
-
-        Login(user)
-        print("worked")
-        
-    
     elif user_input == "B":
-        print("worked")
+        print("Worked")
 
+    Main_Screen(user)
 
-def Main_Screen():
-    pass
 
 
 Enter_Screen()
 
-#Work on home menu and bank functions
+#TODO CONTINUE WORKING ON THE HOME SCREEN (WITHDRAWS/DEPOSITS)
